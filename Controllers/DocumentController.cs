@@ -1,28 +1,87 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WebApplication16.Data.Models;
+using WebApplication16.Repositories;
+using WebApplication16.Services;
 
 namespace WebApplication16.Controllers
 {
     public class DocumentController : Controller
     {
-        public IActionResult Index()
+        private readonly IDocumentRepository _documentRepository;
+        private readonly BlobService _blobService;
+
+        public DocumentController(IDocumentRepository documentRepository, BlobService blobService)
         {
-            return View();
+            _documentRepository = documentRepository;
+            _blobService = blobService;
         }
 
-        public IActionResult Upload(int id)
+        public async Task<IActionResult> Index()
         {
+            var userId = HttpContext.Session.GetInt32("UserId");
+            if (userId == null)
+                return RedirectToAction("Login", "Auth");
+
+            var documents = await _documentRepository.GetUserDocumentsAsync(userId.Value);
+            return View(documents);
+        }
+
+        public IActionResult Upload()
+        {
+            var userId = HttpContext.Session.GetInt32("UserId");
+            if (userId == null)
+                return RedirectToAction("Login", "Auth");
+
             return View();
         }
 
         [HttpPost]
-        public IActionResult Upload(int id, IFormFile file)
+        public async Task<IActionResult> Upload(string title, IFormFile file)
         {
-            return View();
+            var userId = HttpContext.Session.GetInt32("UserId");
+            if (userId == null)
+                return RedirectToAction("Login", "Auth");
+
+            if (file == null || file.Length == 0)
+            {
+                ModelState.AddModelError("", "Choose file for upload");
+                return View();
+            }
+
+            var blobFileName = file.FileName;
+
+            await _blobService.UploadAsync(file, blobFileName);
+
+            var doc = new Document
+            {
+                Title = title,
+                BlobName = blobFileName,
+                UserId = userId.Value,
+                Status = Document.DocumentStatus.Draft
+            };
+
+            await _documentRepository.AddAsync(doc);
+            await _documentRepository.SaveChangesAsync();
+
+            doc.Status = Document.DocumentStatus.InReview;
+            await _documentRepository.UpdateAsync(doc);
+            await _documentRepository.SaveChangesAsync();
+
+            return RedirectToAction("Index");
         }
 
-        public IActionResult Details(int id)
+        public async Task<IActionResult> Details(int id)
         {
-            return View();
+            var userId = HttpContext.Session.GetInt32("UserId");
+            if (userId == null)
+                return RedirectToAction("Login", "Auth");
+
+            var document = await _documentRepository.GetAsync(id);
+
+            if (document == null || document.UserId != userId.Value)
+                return NotFound();
+
+            return View(document);
         }
     }
 }

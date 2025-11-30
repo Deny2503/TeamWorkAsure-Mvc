@@ -1,10 +1,12 @@
 using Microsoft.EntityFrameworkCore;
 using WebApplication16.Data;
+using WebApplication16.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddSingleton<BlobService>();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(Environment.GetEnvironmentVariable("DATABASE_CONNECTION_STRING")));
