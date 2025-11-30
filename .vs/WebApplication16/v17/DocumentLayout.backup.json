@@ -1,0 +1,181 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\TeamWorkAsure-Mvc\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D3AE73D0-8436-4E90-830A-11D3275A2096}|WebApplication16.csproj|c:\\users\\user\\source\\repos\\teamworkasure-mvc\\views\\document\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D3AE73D0-8436-4E90-830A-11D3275A2096}|WebApplication16.csproj|solutionrelative:views\\document\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3AE73D0-8436-4E90-830A-11D3275A2096}|WebApplication16.csproj|c:\\users\\user\\source\\repos\\teamworkasure-mvc\\postcss.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{D3AE73D0-8436-4E90-830A-11D3275A2096}|WebApplication16.csproj|solutionrelative:postcss.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3AE73D0-8436-4E90-830A-11D3275A2096}|WebApplication16.csproj|c:\\users\\user\\source\\repos\\teamworkasure-mvc\\tailwind.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{D3AE73D0-8436-4E90-830A-11D3275A2096}|WebApplication16.csproj|solutionrelative:tailwind.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3AE73D0-8436-4E90-830A-11D3275A2096}|WebApplication16.csproj|c:\\users\\user\\source\\repos\\teamworkasure-mvc\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D3AE73D0-8436-4E90-830A-11D3275A2096}|WebApplication16.csproj|solutionrelative:package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3AE73D0-8436-4E90-830A-11D3275A2096}|WebApplication16.csproj|c:\\users\\user\\source\\repos\\teamworkasure-mvc\\wwwroot\\css\\tailwind.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{D3AE73D0-8436-4E90-830A-11D3275A2096}|WebApplication16.csproj|solutionrelative:wwwroot\\css\\tailwind.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3AE73D0-8436-4E90-830A-11D3275A2096}|WebApplication16.csproj|c:\\users\\user\\source\\repos\\teamworkasure-mvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D3AE73D0-8436-4E90-830A-11D3275A2096}|WebApplication16.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3AE73D0-8436-4E90-830A-11D3275A2096}|WebApplication16.csproj|c:\\users\\user\\source\\repos\\teamworkasure-mvc\\views\\document\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D3AE73D0-8436-4E90-830A-11D3275A2096}|WebApplication16.csproj|solutionrelative:views\\document\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3AE73D0-8436-4E90-830A-11D3275A2096}|WebApplication16.csproj|c:\\users\\user\\source\\repos\\teamworkasure-mvc\\views\\document\\upload.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D3AE73D0-8436-4E90-830A-11D3275A2096}|WebApplication16.csproj|solutionrelative:views\\document\\upload.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3AE73D0-8436-4E90-830A-11D3275A2096}|WebApplication16.csproj|c:\\users\\user\\source\\repos\\teamworkasure-mvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D3AE73D0-8436-4E90-830A-11D3275A2096}|WebApplication16.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{131369f2-062d-44a2-8671-91ff31efb4f4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "postcss.config.js",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TeamWorkAsure-Mvc\\postcss.config.js",
+              "RelativeDocumentMoniker": "postcss.config.js",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\TeamWorkAsure-Mvc\\postcss.config.js",
+              "RelativeToolTip": "postcss.config.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-11-30T10:18:21.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "tailwind.config.js",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TeamWorkAsure-Mvc\\tailwind.config.js",
+              "RelativeDocumentMoniker": "tailwind.config.js",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\TeamWorkAsure-Mvc\\tailwind.config.js",
+              "RelativeToolTip": "tailwind.config.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-11-30T10:16:56.335Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "tailwind.css",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TeamWorkAsure-Mvc\\wwwroot\\css\\tailwind.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\tailwind.css",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\TeamWorkAsure-Mvc\\wwwroot\\css\\tailwind.css",
+              "RelativeToolTip": "wwwroot\\css\\tailwind.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-30T10:13:02.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "package.json",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TeamWorkAsure-Mvc\\package.json",
+              "RelativeDocumentMoniker": "package.json",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\TeamWorkAsure-Mvc\\package.json",
+              "RelativeToolTip": "package.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-30T09:45:14.165Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TeamWorkAsure-Mvc\\Views\\Document\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Document\\Details.cshtml",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\TeamWorkAsure-Mvc\\Views\\Document\\Details.cshtml",
+              "RelativeToolTip": "Views\\Document\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-30T09:42:01.999Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Upload.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TeamWorkAsure-Mvc\\Views\\Document\\Upload.cshtml",
+              "RelativeDocumentMoniker": "Views\\Document\\Upload.cshtml",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\TeamWorkAsure-Mvc\\Views\\Document\\Upload.cshtml",
+              "RelativeToolTip": "Views\\Document\\Upload.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-30T09:41:53.378Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TeamWorkAsure-Mvc\\Views\\Document\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Document\\Index.cshtml",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\TeamWorkAsure-Mvc\\Views\\Document\\Index.cshtml",
+              "RelativeToolTip": "Views\\Document\\Index.cshtml",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAjwBgAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-30T09:41:38.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TeamWorkAsure-Mvc\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\TeamWorkAsure-Mvc\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-30T09:37:39.964Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TeamWorkAsure-Mvc\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\TeamWorkAsure-Mvc\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-30T09:37:06.674Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

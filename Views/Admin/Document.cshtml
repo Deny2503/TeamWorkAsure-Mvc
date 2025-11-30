@@ -1,0 +1,38 @@
+﻿@model IEnumerable<WebApplication16.Models.Document>
+
+<div class="container mx-auto p-8">
+    <h2 class="text-2xl font-bold mb-4">Admin — Documents</h2>
+
+    <table class="min-w-full bg-white shadow-md rounded">
+        <thead class="bg-gray-200">
+            <tr>
+                <th class="px-4 py-2 text-left">ID</th>
+                <th class="px-4 py-2 text-left">Name</th>
+                <th class="px-4 py-2 text-left">Status</th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var doc in Model)
+            {
+                <tr class="border-t">
+                    <td class="px-4 py-2">@doc.Id</td>
+                    <td class="px-4 py-2">@doc.FileName</td>
+                    <td class="px-4 py-2">@doc.Status</td>
+                    <td class="px-4 py-2">
+                        <a href="/Admin/Document/@doc.Id"
+                           class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                            Open
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <a href="/Admin/Export"
+       class="inline-block mt-4 px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-900">
+        Export CSV
+    </a>
+</div>
