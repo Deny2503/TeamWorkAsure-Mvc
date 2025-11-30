@@ -1,21 +1,23 @@
-﻿@model WebApplication16.Data.Models.Document
+﻿@using WebApplication16.Data.Models
+@{
+    var doc = new Document
+    {
+        Id = 1,
+        Title = "AmazingPresentation.pdf",
+        Status = Document.DocumentStatus.Approved,
+        BlobName = "amazing.pdf"
+    };
+}
 
-<div class="container mx-auto p-8">
+<div class="glass p-10 rounded-xl space-y-6">
 
-    <h2 class="text-2xl font-bold">@Model.Title</h2>
+    <h1 class="text-4xl font-bold">@doc.Title</h1>
 
-    <p class="mt-2"><b>Status:</b> @Model.Status</p>
-    <p><b>Blob:</b> @Model.BlobName</p>
-    <p><b>User ID:</b> @Model.UserId</p>
+    <p class="text-xl"><b>Status:</b> @doc.Status</p>
+    <p class="text-xl"><b>Blob:</b> @doc.BlobName</p>
 
-    <a href="/files/@Model.BlobName"
-       class="inline-block mt-4 px-4 py-2 bg-green-600 text-white rounded">
-        Download
-    </a>
+    <a class="btn">Download</a>
 
-    <hr class="my-6" />
+    <a href="/Document" class="btn-secondary">Back</a>
 
-    <h3 class="text-xl font-semibold mb-2">History</h3>
-
-    <p class="text-gray-500">History is not implemented yet.</p>
 </div>

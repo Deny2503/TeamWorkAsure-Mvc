@@ -3,28 +3,24 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] - Document Manager</title>
 
-    <title>@ViewData["Title"]</title>
-
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-
+    <link rel="stylesheet" href="@Url.Content("~/css/site.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/custom-components.css")" />
 </head>
 
-<body class="bg-gray-100 text-gray-900">
+<body class="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 text-white">
 
-    <nav class="bg-white shadow mb-8">
-        <div class="container mx-auto flex items-center justify-between p-4">
-            <a href="/" class="text-xl font-bold">📄 Document Manager</a>
+    <nav class="glass mx-6 mt-4 px-6 py-4 flex justify-between items-center">
+        <a href="/" class="text-2xl font-bold tracking-wide">DocManager</a>
 
-            <div class="space-x-4">
-                <a href="/Document" class="text-gray-700 hover:text-blue-600">Documents</a>
-                <a href="/Admin/Documents" class="text-gray-700 hover:text-blue-600">Admin</a>
-                <a href="/Home/Privacy" class="text-gray-700 hover:text-blue-600">Privacy</a>
-            </div>
+        <div class="flex gap-6 text-lg">
+            <a href="/Document" class="hover:text-yellow-200 transition">My Docs</a>
+            <a href="/Admin/Documents" class="hover:text-yellow-200 transition">Admin</a>
         </div>
     </nav>
 
-    <main class="container mx-auto px-4">
+    <main class="max-w-6xl mx-auto mt-10 glass p-10">
         @RenderBody()
     </main>
 

@@ -1,39 +1,40 @@
-﻿@model IEnumerable<WebApplication16.Data.Models.Document>
+﻿@using WebApplication16.Data.Models
+@{
+    var Model = new List<Document>
+    {
+        new Document { Id = 1, Title = "UserDoc1.pdf", Status = Document.DocumentStatus.Draft, BlobName = "userdoc1.pdf", UserId = 1 },
+        new Document { Id = 2, Title = "Homework.docx", Status = Document.DocumentStatus.InReview, BlobName = "homework.docx", UserId = 1 },
+        new Document { Id = 3, Title = "Presentation.pdf", Status = Document.DocumentStatus.Approved, BlobName = "presentation.pdf", UserId = 1 }
+    };
+}
 
-<div class="container mx-auto p-8">
-    <h2 class="text-2xl font-bold mb-4">My Documents</h2>
+<h2 class="text-3xl font-bold mb-6">📁 My Documents</h2>
 
-    <a href="/Document/Upload"
-       class="inline-block mb-4 px-4 py-2 bg-green-600 text-white rounded">
-        Upload New Document
-    </a>
+<a href="/Document/Upload" class="btn mb-4 inline-block">Upload Document</a>
 
-    <table class="min-w-full bg-white shadow rounded overflow-hidden">
-        <thead class="bg-gray-100">
-            <tr>
-                <th class="px-4 py-2 text-left">ID</th>
-                <th class="px-4 py-2 text-left">Title</th>
-                <th class="px-4 py-2 text-left">Status</th>
-                <th class="px-4 py-2 text-left">Blob</th>
-                <th></th>
+<table class="w-full glass rounded-xl overflow-hidden">
+    <thead class="bg-white/20">
+        <tr class="text-left text-lg">
+            <th class="px-4 py-3">ID</th>
+            <th class="px-4 py-3">Title</th>
+            <th class="px-4 py-3">Status</th>
+            <th class="px-4 py-3">Blob</th>
+            <th class="px-4 py-3"></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var doc in Model)
+        {
+            <tr class="table-row-hover border-t border-white/10">
+                <td class="px-4 py-3">@doc.Id</td>
+                <td class="px-4 py-3">@doc.Title</td>
+                <td class="px-4 py-3">@doc.Status</td>
+                <td class="px-4 py-3">@doc.BlobName</td>
+                <td class="px-4 py-3 text-right">
+                    <a href="/Document/Details/@doc.Id" class="btn">Open</a>
+                </td>
             </tr>
-        </thead>
-        <tbody>
-            @foreach (var doc in Model)
-            {
-                <tr class="border-t">
-                    <td class="px-4 py-2">@doc.Id</td>
-                    <td class="px-4 py-2">@doc.Title</td>
-                    <td class="px-4 py-2">@doc.Status</td>
-                    <td class="px-4 py-2">@doc.BlobName</td>
-                    <td class="px-4 py-2 text-right">
-                        <a href="/Document/Details/@doc.Id"
-                           class="px-3 py-1 bg-blue-600 text-white rounded">
-                            Details
-                        </a>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
-</div>
+        }
+    </tbody>
+</table>

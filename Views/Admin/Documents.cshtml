@@ -1,40 +1,38 @@
-﻿@model IEnumerable<WebApplication16.Data.Models.Document>
+﻿@using WebApplication16.Data.Models
+@{
+    var Model = new List<Document>
+    {
+        new Document { Id = 1, Title = "UserDoc1.pdf", Status = Document.DocumentStatus.Draft, BlobName = "userdoc1.pdf", UserId = 1 },
+        new Document { Id = 2, Title = "Homework.docx", Status = Document.DocumentStatus.InReview, BlobName = "homework.docx", UserId = 1 },
+        new Document { Id = 3, Title = "Presentation.pdf", Status = Document.DocumentStatus.Approved, BlobName = "presentation.pdf", UserId = 1 }
+    };
+}
 
-<div class="container mx-auto p-8">
-    <h2 class="text-2xl font-bold mb-4">Admin — Documents</h2>
+<h1 class="text-4xl font-bold mb-6">🛡 Admin — Document Review</h1>
 
-    <table class="min-w-full bg-white shadow-md rounded">
-        <thead class="bg-gray-200">
-            <tr>
-                <th class="px-4 py-2 text-left">ID</th>
-                <th class="px-4 py-2 text-left">Title</th>
-                <th class="px-4 py-2 text-left">Status</th>
-                <th class="px-4 py-2 text-left">User</th>
-                <th></th>
+<table class="w-full glass rounded-xl overflow-hidden">
+    <thead class="bg-white/20">
+        <tr class="text-left text-lg">
+            <th class="px-4 py-3">ID</th>
+            <th class="px-4 py-3">Title</th>
+            <th class="px-4 py-3">Status</th>
+            <th class="px-4 py-3">User</th>
+            <th class="px-4 py-3"></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var doc in Model)
+        {
+            <tr class="table-row-hover border-t border-white/10">
+                <td class="px-4 py-3">@doc.Id</td>
+                <td class="px-4 py-3">@doc.Title</td>
+                <td class="px-4 py-3">@doc.Status</td>
+                <td class="px-4 py-3">@doc.UserId</td>
+                <td class="px-4 py-3 text-right">
+                    <a href="/Admin/Document/@doc.Id" class="btn">Review</a>
+                </td>
             </tr>
-        </thead>
-
-        <tbody>
-            @foreach (var doc in Model)
-            {
-                <tr class="border-t">
-                    <td class="px-4 py-2">@doc.Id</td>
-                    <td class="px-4 py-2">@doc.Title</td>
-                    <td class="px-4 py-2">@doc.Status</td>
-                    <td class="px-4 py-2">@doc.UserId</td>
-                    <td class="px-4 py-2">
-                        <a href="/Admin/Document/@doc.Id"
-                           class="px-4 py-2 bg-blue-600 text-white rounded">
-                            Open
-                        </a>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
-
-    <a href="/Admin/Export"
-       class="inline-block mt-4 px-4 py-2 bg-gray-800 text-white rounded">
-        Export CSV
-    </a>
-</div>
+        }
+    </tbody>
+</table>

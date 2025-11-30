@@ -1,33 +1,25 @@
-﻿@model WebApplication16.Data.Models.Document
-@using WebApplication16.Data.Models;
+﻿@using WebApplication16.Data.Models
+@{
+    var doc = new Document { Id = 1, Title = "ExampleDoc", Status = Document.DocumentStatus.InReview };
+}
 
-<div class="container mx-auto p-8">
-    <h2 class="text-2xl font-bold">Admin: @Model.Title</h2>
+<div class="glass p-10 rounded-xl space-y-6">
 
-    <p class="mt-2"><b>Status:</b> @Model.Status</p>
+    <h1 class="text-4xl font-bold">Review: @doc.Title</h1>
 
-    <form method="post" asp-action="ChangeStatus"
-          class="mt-4 p-4 bg-white rounded shadow max-w-sm">
+    <p class="text-lg"><b>Current Status:</b> @doc.Status</p>
 
-        <input type="hidden" name="id" value="@Model.Id" />
-
-        <label class="block mb-1">New Status</label>
-
-        <select name="newStatus" class="border rounded p-2 w-full">
+    <form class="space-y-4">
+        <select class="bg-white/20 border border-white/30 text-white p-3 rounded w-full">
             @foreach (var s in Enum.GetValues(typeof(Document.DocumentStatus)))
             {
-                <option value="@s">@s</option>
+                <option>@s</option>
             }
         </select>
 
-        <button type="submit"
-                class="mt-3 px-4 py-2 bg-blue-600 text-white rounded">
-            Change
-        </button>
+        <button class="btn w-full">Apply</button>
     </form>
 
-    <hr class="my-6" />
+    <a href="/Admin/Documents" class="btn-secondary">Back</a>
 
-    <h3 class="text-xl font-semibold mb-2">History</h3>
-    <p class="text-gray-500">History not implemented.</p>
 </div>
