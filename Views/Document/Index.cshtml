@@ -1,0 +1,50 @@
+﻿@model IEnumerable<WebApplication16.Models.Document>
+
+<div class="bg-white p-6 rounded shadow">
+
+    <div class="flex justify-between items-center mb-6">
+        <h2 class="text-2xl font-semibold">My Documents</h2>
+
+        <a href="/Document/Upload"
+           class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+            + Upload
+        </a>
+    </div>
+
+    <table class="min-w-full border-collapse">
+        <thead>
+            <tr class="bg-gray-200 text-left">
+                <th class="p-3">ID</th>
+                <th class="p-3">Name</th>
+                <th class="p-3">Status</th>
+                <th class="p-3 text-right">Actions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var doc in Model)
+            {
+                <tr class="border-b hover:bg-gray-50">
+                    <td class="p-3">@doc.Id</td>
+                    <td class="p-3">@doc.FileName</td>
+                    <td class="p-3">
+                        <span class="px-3 py-1 text-sm rounded
+                            @(doc.Status == DocumentStatus.Approved ? "bg-green-100 text-green-800" :
+                                                        doc.Status == DocumentStatus.Rejected ? "bg-red-100 text-red-800" :
+                                                        doc.Status == DocumentStatus.InReview ? "bg-yellow-100 text-yellow-800" :
+                                                                                             "bg-gray-100 text-gray-800")">
+                        @doc.Status
+                    </span>
+                </td>
+                <td class="p-3 text-right">
+                    <a href="/Document/Details/@doc.Id"
+                       class="px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700">
+                        Details
+                    </a>
+                </td>
+            </tr>
+                        }
+        </tbody>
+    </table>
+
+</div>
